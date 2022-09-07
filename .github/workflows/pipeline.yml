@@ -21,10 +21,11 @@ jobs:
         run: npm run eslint
       - name: Build
         run: npm run build
+      - name: List
+        run: ls
       - uses: amondnet/vercel-action@v19
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: '--prod'
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
-          
