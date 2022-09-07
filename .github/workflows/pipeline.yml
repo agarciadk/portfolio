@@ -22,7 +22,9 @@ jobs:
         run: npm run eslint
       - name: Build
         run: npm run build
-      - uses: amondnet/vercel-action@v20 
+      - name: Deploy to Vercel
+        if: ${{ github.event_name == 'push' }}
+        uses: amondnet/vercel-action@v20 
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: '--prod'
