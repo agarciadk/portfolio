@@ -1,0 +1,24 @@
+.card-wrapper {
+	display: flex;
+	flex-direction: row;
+	column-gap: 20px;
+	justify-content: center;
+}
+.card {
+	max-width: 300px;
+	background-color: aliceblue;
+	border-radius: 15px;
+	color: #333;
+	padding: 8px 12px;
+}
+.card-title {
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+.card-description {
+	text-align: justify;
+	color: #555
+}
+.card-description a {
+	cursor: pointer;
+}

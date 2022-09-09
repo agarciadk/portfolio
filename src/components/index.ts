@@ -1,0 +1,7 @@
+export { default as Education } from './Education'
+export { default as Experience } from './Experience'
+export { default as ExperienceContent } from './Experience/ExperienceContent'
+export { default as Presentation } from './Presentation'
+export { default as Projects } from './Projects'
+export { default as ProjectCard } from './Projects/ProjectCard'
+export { default as Skills } from './Skills'
