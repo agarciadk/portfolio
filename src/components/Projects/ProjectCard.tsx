@@ -20,15 +20,17 @@ const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX
 				<a href='#' title='Página web'><img src={hashLanguages.globe} /></a>
 			</div>
 			<img src={image} />
-			<p className='card-description'>
-				{descIntro}
-				<span id='dots' style={dotStyle} aria-label='dots'>...</span>
-				<span id='more' style={moreStyle} aria-label='more'>
-					{descMore}
-				</span>
-				{' '}
-				<a role='button' onClick={() => readMore()} style={dotStyle}>leer mas</a>
-			</p>
+			<div className='card-description'>
+				<p>
+					{descIntro}
+					<span id='dots' style={dotStyle} aria-label='dots'>...</span>
+					<span id='more' style={moreStyle} aria-label='more'>
+						{descMore}
+					</span>
+					{' '}
+					<a role='button' onClick={() => readMore()} style={dotStyle}>leer mas</a>
+				</p>
+			</div>
 			<div className='card-languages'>
 				{languages.map((language: Language) => (
 					<img
