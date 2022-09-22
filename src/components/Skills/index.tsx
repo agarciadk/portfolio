@@ -1,7 +1,5 @@
-import './Skills.css'
-
 const Skills = (): JSX.Element => {
-	return <h2>Habilidades</h2>
+	return <section><h2>Habilidades</h2></section>
 }
 
 export default Skills

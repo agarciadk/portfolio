@@ -14,15 +14,16 @@ const ExperienceContent: FC<ExperienceProps> = ({
 }) => (
 	<div className='experience-wrapper' role='row'>
 		<h3 className='m-0'>{company}</h3>
-		<p className='m-0'><small>{position}</small></p>
+		<p className='m-0 subtitle'><small>{position}</small></p>
 		<div className='experience-date'>
 			<p className='m-0'><small>{beginning} - {ending}, {location}</small></p>
 			<p className='m-0'><small>{sector} ({business})</small></p>
 		</div>
-		<div className='ml-30'>
-			<h4>Keys</h4>
+		<hr />
+		<div className='mx-2 mt-1'>
+			<h4 className='opacity-9'>Keys</h4>
 			<p className='t-justify'>{keys}</p>
-			<h4>Functionality</h4>
+			<h4 className='mt-1 opacity-9'>Functionality</h4>
 			<p className='t-justify'>{functionality}</p>
 		</div>
 	</div>

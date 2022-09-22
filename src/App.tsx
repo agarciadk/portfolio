@@ -1,21 +1,21 @@
-import './App.css'
 import {
 	Presentation,
 	Experience,
 	Projects,
 	Education,
-	Skills
+	Skills,
+	Wrapper
 } from './components'
 
 function App (): JSX.Element {
 	return (
-		<div>
+		<Wrapper>
 			<Presentation profilePic='/profile.jpg' />
 			<Experience />
 			<Projects />
 			<Education />
 			<Skills />
-		</div>
+		</Wrapper>
 	)
 }
 

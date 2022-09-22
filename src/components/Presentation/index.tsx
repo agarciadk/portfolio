@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import './Presentation.css'
 
 interface PresentationProps {
 	profilePic: string
@@ -8,15 +7,15 @@ interface PresentationProps {
 const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 	return (
 		<div className='presentation-wrapper'>
+			<div>
+				<h1>Alberto</h1>
+				<p title='Software Engineer' className='mt-1 subtitle'>Software Engineer</p>
+			</div>
 			<img
 				src={profilePic}
 				className='profile'
 				alt='profile pic'
 			/>
-			<div>
-				<h3>Alberto García de Paredes Cidoncha</h3>
-				<p>Software Engineer</p>
-			</div>
 		</div>
 	)
 }

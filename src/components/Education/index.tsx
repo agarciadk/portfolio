@@ -1,7 +1,5 @@
-import './Education.css'
-
 const Education = (): JSX.Element => {
-	return <h2>Educación</h2>
+	return <section><h2>Educación</h2></section>
 }
 
 export default Education

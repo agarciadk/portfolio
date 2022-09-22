@@ -13,7 +13,7 @@ describe('Presentation', () => {
 	it('should render the name and title correctly', () => {
 		render(<Presentation />)
 
-		screen.getByText('Alberto García de Paredes Cidoncha')
+		screen.getByText('Alberto')
 		screen.getByText('Software Engineer')
 	})
 
