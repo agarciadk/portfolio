@@ -6,7 +6,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --primary-blue: #09c;
+  --dark-background-color: #242424;
+  --light-font-color: #222;
+  --dark-card-background: #f9f9f9;
+  --card-border-radius: 15px;
 }
 
 * {
@@ -26,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--dark-background-color);
   text-rendering: optimizeLegibility;
 }
 
@@ -51,7 +55,7 @@ h1 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 2rem;
 }
 
 section h2 {
@@ -123,9 +127,9 @@ section h2::before {
   padding: 1.5rem 3rem;
 	text-align: left;
 	margin-bottom: 30px;
-  background-color: #f9f9f9;
-  color: #222;
-  border-radius: 10px;
+  background-color: var(--dark-card-background);
+  color: var(--light-font-color);
+  border-radius: var(--card-border-radius);
 }
 .m-0 {
 	margin: 0;
@@ -155,22 +159,43 @@ section h2::before {
 	display: flex;
 	flex-direction: row;
 	column-gap: 20px;
-	justify-content: center;
+  margin-left: 64px;
+	justify-content: space-between;
 }
 .card {
 	max-width: 300px;
-	background-color: aliceblue;
-	border-radius: 15px;
-	color: #333;
-	padding: 8px 12px;
+	background-color: var(--dark-card-background);
+  border-radius: var(--card-border-radius);
+	color: var(--light-font-color);
+	padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
 }
 .card-title {
 	font-size: 1.2em;
-	text-decoration: underline;
+  padding-bottom: 16px;
+  text-transform: uppercase;
 }
+.card-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+}
+.card-links a {
+  border: 1px solid var(--dark-background-color);
+  padding: 8px;
+}
+.card-links a img {
+  transition: 0.2s ease-in-out;
+}
+.card-links a:hover img {
+  transform: scale(1.2);
+}
+
 .card-description {
-	text-align: justify;
-	color: #555
+  padding: 1rem;
+	text-align: left;
+  opacity: .9;
 }
 .card-description a {
 	cursor: pointer;

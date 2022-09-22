@@ -1,6 +1,8 @@
 import angular from '../assets/angular.svg'
 import dotnet from '../assets/dotnet.svg'
 import express from '../assets/express.svg'
+import github from '../assets/github.svg'
+import globe from '../assets/globe.svg'
 import javascript from '../assets/javascript.svg'
 import mysql from '../assets/mysql.svg'
 import nodejs from '../assets/nodejs.svg'
@@ -15,13 +17,15 @@ const hashLanguages = {
 	angular,
 	dotnet,
 	express,
+	github,
+	globe,
 	javascript,
 	mysql,
 	nodejs,
 	postgresql,
 	react,
-	sqlserver,
 	spring,
+	sqlserver,
 	typescript,
 	vuejs
 }

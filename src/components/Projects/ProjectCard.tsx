@@ -14,8 +14,12 @@ const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX
 	const moreStyle = !hidden ? { display: 'inline' } : { display: 'none' }
 	return (
 		<div className='card' role="column">
-			<p className='card-title'>{title}</p>
-			<img className='card-image' src={image} />
+			<h3 className='card-title'>{title}</h3>
+			<div className='card-links'>
+				<a href='#' title='GitHub'><img src={hashLanguages.github} /></a>
+				<a href='#' title='Página web'><img src={hashLanguages.globe} /></a>
+			</div>
+			<img src={image} />
 			<p className='card-description'>
 				{descIntro}
 				<span id='dots' style={dotStyle} aria-label='dots'>...</span>
@@ -25,7 +29,6 @@ const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX
 				{' '}
 				<a role='button' onClick={() => readMore()} style={dotStyle}>leer mas</a>
 			</p>
-
 			<div className='card-languages'>
 				{languages.map((language: Language) => (
 					<img
