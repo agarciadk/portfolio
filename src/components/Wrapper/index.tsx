@@ -6,9 +6,9 @@ interface indexProps {
 
 const Wrapper: FC<indexProps> = ({ children }) => {
 	return (
-		<div className='wrapper'>
+		<main className='wrapper'>
 			{children}
-		</div>
+		</main>
 	)
 }
 

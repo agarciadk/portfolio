@@ -3,7 +3,7 @@ import ExperienceContent from './ExperienceContent'
 
 const Experience = (): JSX.Element => {
 	return (
-		<section>
+		<section id='experience'>
 			<h2 title='Experiencia'>Experiencia</h2>
 			{mockExperiences.map(experience =>
 				<ExperienceContent key={experience.company} {...experience} />

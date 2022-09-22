@@ -1,5 +1,5 @@
 const Skills = (): JSX.Element => {
-	return <section><h2>Habilidades</h2></section>
+	return <section id='skills'><h2>Habilidades</h2></section>
 }
 
 export default Skills

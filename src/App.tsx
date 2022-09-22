@@ -4,18 +4,22 @@ import {
 	Projects,
 	Education,
 	Skills,
-	Wrapper
+	Wrapper,
+	Nav
 } from './components'
 
 function App (): JSX.Element {
 	return (
-		<Wrapper>
-			<Presentation profilePic='/profile.jpg' />
-			<Experience />
-			<Projects />
-			<Education />
-			<Skills />
-		</Wrapper>
+		<>
+			<Nav />
+			<Wrapper>
+				<Presentation profilePic='/profile.webp' />
+				<Experience />
+				<Projects />
+				<Education />
+				<Skills />
+			</Wrapper>
+		</>
 	)
 }
 

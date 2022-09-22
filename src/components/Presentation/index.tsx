@@ -6,7 +6,7 @@ interface PresentationProps {
 
 const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 	return (
-		<section className='presentation-wrapper'>
+		<section id='introduction' className='presentation-wrapper'>
 			<div>
 				<h1>Alberto</h1>
 				<p title='Software Engineer' className='mt-1 subtitle'>Software Engineer</p>
