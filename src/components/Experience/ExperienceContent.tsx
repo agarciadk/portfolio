@@ -21,11 +21,10 @@ const ExperienceContent: FC<ExperienceProps> = ({
 				<p className='m-0'><small>{sector} ({business})</small></p>
 			</div>
 		</div>
-		<hr />
 		<div className='experience-description mx-2'>
-			<h4 className='opacity-9'>Keys</h4>
+			<h4>Keys</h4>
 			<p className='t-justify'>{keys}</p>
-			<h4 className='mt-1 opacity-9'>Functionality</h4>
+			<h4 className='mt-1'>Functionality</h4>
 			<p className='t-justify'>{functionality}</p>
 		</div>
 	</div>

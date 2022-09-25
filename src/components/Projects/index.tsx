@@ -6,7 +6,9 @@ const Projects = (): JSX.Element => {
 		<section id='projects'>
 			<h2>Proyectos</h2>
 			<div className='card-wrapper'>
-				{mockProjects.map(mockProject => <ProjectCard key={mockProject.title} {...mockProject} />)}
+				{mockProjects.map(mockProject =>
+					<ProjectCard key={mockProject.title} {...mockProject} />
+				)}
 			</div>
 		</section>
 	)

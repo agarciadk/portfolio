@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway&display=swap');
+
 :root {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -35,13 +37,12 @@
 }
 
 * {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  max-width: 1280px;
   margin: 0 auto;
-  display: flex;
   text-align: center;
   place-items: center;
   min-width: 320px;
@@ -75,6 +76,8 @@ h1 {
 }
 
 .wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -183,12 +186,18 @@ nav a:hover:before, nav a:hover:after {
 .experience-header {
   border-top-right-radius: var(--card-border-radius);
   border-top-left-radius: var(--card-border-radius);
+  border-bottom: 2px solid #222;
   padding: 1.5rem 3rem;
 }
 .experience-description {
   padding: 1.5rem 3rem;
 }
-
+.experience-description p {
+  font-size: 0.8rem;
+}
+.experience-description p, .experience-description h4 {
+  opacity: .8;
+}
 .m-0 {
 	margin: 0;
 }
@@ -214,24 +223,27 @@ nav a:hover:before, nav a:hover:after {
 }
 /* Project */
 .card-wrapper {
-	display: flex;
-	flex-direction: row;
-	column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+
   margin-left: 64px;
-	justify-content: space-between;
+  justify-content: space-between;
 }
 .card {
-	max-width: 300px;
+	min-width: 380px;
+  max-width: 380px;
+  height: fit-content;
 	background-color: var(--dark-card-background);
-  border-radius: var(--card-border-radius);
 	color: var(--dark-card-font-color);
-	padding: 1.5rem 0;
+  border-radius: var(--card-border-radius);
   display: flex;
   flex-direction: column;
 }
 .card-title {
 	font-size: 1.2em;
-  padding-bottom: 16px;
+  letter-spacing: 1px;
+  padding: 0.9rem 0;
+  border-radius: 15px 15px 0 0;
   text-transform: uppercase;
 }
 .card-links {
@@ -239,6 +251,8 @@ nav a:hover:before, nav a:hover:after {
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
   background-color: var(--light-background-color);
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
 }
 .card-links a {
   border: 1px solid var(--dark-background-color);
@@ -250,20 +264,55 @@ nav a:hover:before, nav a:hover:after {
 .card-links a:hover img {
   transform: scale(1.2);
 }
-
+.card-image {
+  object-fit: cover;
+}
 .card-description {
   padding: 1rem;
 	text-align: left;
-  opacity: .9;
   color: var(--dark-card-font-color);
   background-color: var(--dark-card-background);
+  font-size: 0.8rem;
 }
-.card-description a {
+.card-description p {
+  opacity: .8;
+  margin-bottom: 1rem;
+}
+.card__read-more {
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s;
+}
+.card__read-more--open {
+  display: block;
+  opacity: 1;
+  height: min-content;
+}
+
+.read-more-btn {
+  display: inline-block;
 	cursor: pointer;
+  background-color: var(--light-lapis-lazuli);
+  padding: 0.6rem 1rem;
+  color: var(--dark-card-background);
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.read-more-btn:hover {
+  background-color: rgba(2, 97, 161, 0.85);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  color: var(--dark-card-background);
 }
 
 .card-languages {
-  padding-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.9rem 0;
+  border-top: 2px solid #222;
+  border-radius: 0 0 15px 15px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -289,7 +338,7 @@ nav a:hover:before, nav a:hover:after {
       var(--light-green-blue-crayola) 100%);
     color: var(--light-card-font-color);
   }
-  .card {
+  .card-title {
     background: linear-gradient(
       90deg,
       var(--light-indigo-dye) 0%,

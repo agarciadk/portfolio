@@ -28,17 +28,15 @@ describe('ProjectCard', () => {
 
 	it('should show the rest of description when user click on read more', () => {
 		render(<ProjectCard {...projectCardProps} />)
-		const dots = screen.getByLabelText('dots')
 		const more = screen.getByLabelText('more')
 		const button = screen.getByRole('button')
-		expect(dots.style.display).toBe('inline')
-		expect(more.style.display).toBe('none')
-		expect(button.style.display).toBe('inline')
+
+		expect(more.className).toBe('card__read-more')
+		expect(button.textContent).toBe('Leer mas...')
 
 		fireEvent.click(button)
 
-		expect(dots.style.display).toBe('none')
-		expect(more.style.display).toBe('inline')
-		expect(button.style.display).toBe('none')
+		expect(more.className).toBe('card__read-more card__read-more--open')
+		expect(button.textContent).toBe('Leer menos...')
 	})
 })

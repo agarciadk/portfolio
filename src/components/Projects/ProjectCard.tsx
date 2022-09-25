@@ -3,15 +3,12 @@ import { Project, Language } from '../../types'
 import hashLanguages from '../../utils/hashLanguages'
 
 const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX.Element => {
-	const [hidden, setHidden] = useState(true)
-	const descIntro = description.slice(0, 140)
-	const descMore = description.slice(140, description.length)
+	const [visibility, setVisibility] = useState(false)
+	const descIntro = description.slice(0, 128)
+	const descMore = description.slice(128, description.length)
 
-	const readMore = (): void => {
-		setHidden(false)
-	}
-	const dotStyle = hidden ? { display: 'inline' } : { display: 'none' }
-	const moreStyle = !hidden ? { display: 'inline' } : { display: 'none' }
+	const toggleReadDescription = (): void => setVisibility((prevState) => !prevState)
+
 	return (
 		<div className='card' role="column">
 			<h3 className='card-title'>{title}</h3>
@@ -19,23 +16,33 @@ const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX
 				<a href='#' title='GitHub'><img src={hashLanguages.github} /></a>
 				<a href='#' title='Página web'><img src={hashLanguages.globe} /></a>
 			</div>
-			<img src={image} />
+			<img className='card-image' src={image} />
 			<div className='card-description'>
 				<p>
 					{descIntro}
-					<span id='dots' style={dotStyle} aria-label='dots'>...</span>
-					<span id='more' style={moreStyle} aria-label='more'>
+					<span
+						className={ visibility ? 'card__read-more card__read-more--open' : 'card__read-more'}
+						aria-label='more'
+					>
 						{descMore}
 					</span>
-					{' '}
-					<a role='button' onClick={() => readMore()} style={dotStyle}>leer mas</a>
 				</p>
+				<a
+					role='button'
+					className='read-more-btn'
+					title={visibility ? 'Leer menos...' : 'Leer mas...'}
+					onClick={() => toggleReadDescription()}
+				>
+					{visibility ? 'Leer menos...' : 'Leer mas...'}
+				</a>
 			</div>
 			<div className='card-languages'>
 				{languages.map((language: Language) => (
 					<img
 						key={`${title}-${language}`}
 						src={hashLanguages[language]}
+						alt={language}
+						title={language}
 					/>
 				))}
 			</div>
