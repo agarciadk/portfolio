@@ -13,7 +13,7 @@ function App (): JSX.Element {
 		<>
 			<Nav />
 			<Wrapper>
-				<Presentation profilePic='/profile.webp' />
+				<Presentation profilePic='https://github.com/agarciadk/agarciadk/assets/4200145/e76b360e-0bdc-4ad4-8ca5-bb91ebccf09a' />
 				<Experience />
 				<Projects />
 				<Education />
