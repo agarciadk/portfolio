@@ -2,38 +2,37 @@ import { Experience } from '../types'
 
 const mockExperiences: Experience[] = [
 	{
-		company: 'Random Company',
-		position: 'Fullstack Developer',
-		sector: 'Medical',
-		business: 'B2C',
-		beginning: 'Month, 20XX',
-		ending: 'Month, 20XX',
-		location: 'City (Country)',
-		keys: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-		ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit`,
-		functionality: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-		ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit`
+		company: 'Minsait',
+		position: 'Software Engineer II',
+		sector: 'Finances',
+		business: 'B2B',
+		beginning: 'Juny, 2024',
+		ending: 'N/A',
+		location: 'Badajoz (Spain)',
+		keys: 'N/A',
+		functionality: 'N/A'
 	},
 	{
-		company: 'Consultory Random SL',
-		position: 'Frontend Developer',
-		sector: 'Bank',
+		company: 'NEORIS',
+		position: 'Software Consultant',
+		sector: 'Finances',
 		business: 'B2B',
-		beginning: 'Month, 20XX',
-		ending: 'Month, 20XX',
-		location: 'City (Country)',
-		keys: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-		ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit`,
-		functionality: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-		ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit`
+		beginning: 'January, 2024',
+		ending: 'Juny, 2024',
+		location: 'Madrid (Spain)',
+		keys: 'N/A',
+		functionality: 'N/A'
+	},
+	{
+		company: 'NTT DATA',
+		position: 'Frontend Developer',
+		sector: 'Finances',
+		business: 'B2B',
+		beginning: 'October, 2022',
+		ending: 'January, 2024',
+		location: 'Salamanca (Spain)',
+		keys: 'N/A',
+		functionality: 'N/A'
 	}
 ]
 
