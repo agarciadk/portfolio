@@ -1,16 +1,18 @@
 import mockProjects from '../../mocks/projects'
+import Section from '../Section'
 import ProjectCard from './ProjectCard'
+import './Projects.css'
 
-const Projects = (): JSX.Element => {
+const Projects = () => {
 	return (
-		<section id='projects'>
-			<h2>Proyectos</h2>
+		<Section id='projects'>
+			<h2>Projects</h2>
 			<div className='card-wrapper'>
 				{mockProjects.map(mockProject =>
 					<ProjectCard key={mockProject.title} {...mockProject} />
 				)}
 			</div>
-		</section>
+		</Section>
 	)
 }
 

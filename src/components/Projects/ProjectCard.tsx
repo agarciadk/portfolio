@@ -1,8 +1,10 @@
-import { FC, useState } from 'react'
+import { JSX, } from 'react/jsx-runtime'
 import { Project, Language } from '../../types'
 import hashLanguages from '../../utils/hashLanguages'
+import { FC, useState } from 'react';
+import './ProjectCard.css'
 
-const ProjectCard: FC<Project> = ({ title, description, image, languages }): JSX.Element => {
+const ProjectCard: FC<Project> = ({ title, description, image, languages}): JSX.Element => {
 	const [visibility, setVisibility] = useState(false)
 	const descIntro = description.slice(0, 128)
 	const descMore = description.slice(128, description.length)

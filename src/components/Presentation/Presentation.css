@@ -1,0 +1,107 @@
+/* Presentation */
+.presentation-wrapper {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-evenly;
+  font-family: Consolas, Helvetica, Arial, sans-serif;
+}
+.profile {
+  display: inline-block;
+  text-align: center;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.presentation-wrapper .title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--primary-green); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 0 0; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: 1.5rem;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-green) }
+}
+.presentation-wrapper .position {
+  font-size: 2.5rem;
+}
+.presentation-wrapper .cursor {
+  font-size: 3rem;
+}
+.presentation-wrapper .description {
+  width: 70ch;
+  opacity: .5;
+  font-family: Consolas, Helvetica, Arial, sans-serif;
+  font-size: .85rem;
+}
+.presentation-wrapper .years {
+  width: 19ch;
+  height: 100px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+}
+.presentation-wrapper .actions {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.presentation-wrapper .email-me-btn {
+  display: inline-block;
+	cursor: pointer;
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  padding: 0.65rem 1.2rem;
+  width: max-content;
+  font-size: .9em;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  transition: transform 0.2s;
+}
+.presentation-wrapper .email-me-btn:hover {
+  background-color: var(--primary-dark-green);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  transform: scale(1.1) translateY(-2px);
+}
+.presentation-wrapper .download-cv-btn {
+  display: flex;
+  position: relative;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: .9em;
+  color: var(--primary-white);
+  cursor: pointer;
+  padding: 0.65rem 1.2rem;
+  width: max-content;
+  opacity: 0.6;
+  z-index: 1;
+  transition: all 0.5s;
+  gap: 0.5rem;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.presentation-wrapper .download-cv-btn img {
+  opacity: 1;
+}
+.presentation-wrapper .download-cv-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+}
+.presentation-wrapper p { 
+  font-size: 2rem;
+}

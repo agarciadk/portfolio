@@ -17,6 +17,6 @@ export interface Experience {
 	beginning: string
 	ending: string
 	location: string
-	keys: string
-	functionality: string
+	responsibilities: Array<{ title: string, description?: string[]}>
+	keys: Array<{ title: string, description?: string[]}>
 }

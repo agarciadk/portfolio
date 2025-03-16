@@ -1,0 +1,12 @@
+div.background-primary, div.background-secondary {
+  width: 100vw;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: calc(-50vw + 50%);
+}
+.background-primary {
+  background-color: var(--dark-background-color);
+}
+.background-secondary {
+  background-color: var(--dark-card-background);
+}

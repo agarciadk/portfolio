@@ -1,7 +1,8 @@
 import { FC, ReactElement } from 'react'
+import './Wrapper.css'
 
 interface indexProps {
-	children: ReactElement[]
+	children: ReactElement | ReactElement[]
 }
 
 const Wrapper: FC<indexProps> = ({ children }) => {

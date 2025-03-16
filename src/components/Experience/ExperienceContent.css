@@ -1,0 +1,9 @@
+.subtitle {
+  color: var(--primary-purple);
+  opacity: .7;
+}
+@media (prefers-color-scheme: light) {
+  .subtitle {
+    color: var(--light-green-blue-crayola);
+  }
+}

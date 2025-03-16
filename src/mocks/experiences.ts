@@ -7,10 +7,10 @@ const mockExperiences: Experience[] = [
 		sector: 'Finances',
 		business: 'B2B',
 		beginning: 'Juny, 2024',
-		ending: 'N/A',
+		ending: 'Present',
 		location: 'Badajoz (Spain)',
 		keys: 'N/A',
-		functionality: 'N/A'
+		responsibilities: 'N/A'
 	},
 	{
 		company: 'NEORIS',
@@ -21,7 +21,7 @@ const mockExperiences: Experience[] = [
 		ending: 'Juny, 2024',
 		location: 'Madrid (Spain)',
 		keys: 'N/A',
-		functionality: 'N/A'
+		responsibilities: 'N/A'
 	},
 	{
 		company: 'NTT DATA',
@@ -32,7 +32,7 @@ const mockExperiences: Experience[] = [
 		ending: 'January, 2024',
 		location: 'Salamanca (Spain)',
 		keys: 'N/A',
-		functionality: 'N/A'
+		responsibilities: 'N/A'
 	}
 ]
 

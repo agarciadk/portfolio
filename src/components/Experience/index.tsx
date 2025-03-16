@@ -1,14 +1,21 @@
-import mockExperiences from '../../mocks/experiences'
+import { JSX } from 'react/jsx-runtime'
 import ExperienceContent from './ExperienceContent'
+import experiences from '../../data/experiences'
+import { ArrowDownRight } from '../Icons/ArrowDownRight'
+import { ArrowDownLeft } from '../Icons/ArrowDownLeft'
+import Section from '../Section'
+import './Experience.css'
 
 const Experience = (): JSX.Element => {
 	return (
-		<section id='experience'>
-			<h2 title='Experiencia'>Experiencia</h2>
-			{mockExperiences.map(experience =>
+		<Section className='experience-section' id='experience' variant='secondary'>
+			<h2 title='Experiencie'>Experience</h2>
+			{experiences.map(experience =>
 				<ExperienceContent key={experience.company} {...experience} />
 			)}
-		</section>
+			<ArrowDownRight />
+			<ArrowDownLeft />
+		</Section>
 	)
 }
 

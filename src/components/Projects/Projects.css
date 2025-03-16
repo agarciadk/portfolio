@@ -1,0 +1,119 @@
+/* Project */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+}
+.card {
+	min-width: 380px;
+  max-width: 380px;
+  height: fit-content;
+  background-color: var(--dark-card-background);
+  color: var(--dark-card-font-color);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 0.9rem 0;
+  border-radius: 15px 15px 0 0;
+  text-transform: uppercase;
+}
+.card-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  background-color: var(--light-background-color);
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+.card-links a {
+  border: 1px solid var(--dark-background-color);
+  padding: 8px;
+}
+.card-links a img {
+  transition: transform 0.2s ease-in-out;
+}
+.card-links a:hover img {
+  transform: scale(1.2);
+}
+.card-image {
+  object-fit: cover;
+}
+.card-description {
+  padding: 1rem;
+  text-align: left;
+  color: var(--dark-card-font-color);
+  background-color: var(--dark-card-background);
+  font-size: 0.8rem;
+}
+.card-description p {
+  opacity: .8;
+  margin-bottom: 1rem;
+}
+.card__read-more {
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s;
+}
+.card__read-more--open {
+  display: block;
+  opacity: 1;
+  height: min-content;
+}
+.read-more-btn {
+  display: inline-block;
+	cursor: pointer;
+  background-color: var(--light-lapis-lazuli);
+  padding: 0.6rem 1rem;
+  color: var(--dark-card-background);
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.read-more-btn:hover {
+  background-color: rgba(2, 97, 161, 0.85);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  color: var(--dark-card-background);
+}
+.card-languages {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.9rem 0;
+  border-top: 2px solid #222;
+  border-radius: 0 0 15px 15px;
+}
+@media (prefers-color-scheme: light) {
+  .card-title {
+    background: linear-gradient(
+      90deg,
+      var(--light-indigo-dye) 0%,
+      var(--light-lapis-lazuli) 65%,
+      var(--light-green-blue-crayola) 100%);
+    color: var(--light-card-font-color);
+  }
+  .card-links a {
+    border-color: var(--light-silver-sand);
+  }
+}
+@media (max-width: 1280px) {
+  .card-wrapper {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .card-wrapper {
+    grid-template-columns: 2fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 320px) and (orientation: portrait) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

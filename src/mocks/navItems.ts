@@ -1,28 +1,40 @@
 const navItems = [
 	{
 		id: 0,
-		label: 'Sobre mi',
-		href: '#introduction'
+		label: 'About me',
+		section: 'presentation',
+		offset: -100
 	},
 	{
 		id: 1,
-		label: 'Experiencia',
-		href: '#experience'
+		label: 'Experience',
+		section: 'experience',
+		offset: -30
 	},
 	{
 		id: 2,
-		label: 'Proyectos',
-		href: '#projects'
+		label: 'Projects',
+		section: 'projects',
+		offset: -30
 	},
 	{
 		id: 3,
-		label: 'Educación',
-		href: '#education'
+		label: 'Education',
+		section: 'education',
+		offset: -30
 	},
 	{
 		id: 4,
-		label: 'Habilidades',
-		href: '#skills'
+		label: 'Skills',
+		section: 'skills',
+		offset: -30
+	},
+	{
+		id: 5,
+		label: 'Contact',
+		section: 'contact',
+		offset: -30,
+		border: true
 	}
 ]
 

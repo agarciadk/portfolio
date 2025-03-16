@@ -1,5 +1,9 @@
+import { JSX } from 'react/jsx-dev-runtime'
+import Section from '../Section'
+import './Education.css'
+
 const Education = (): JSX.Element => {
-	return <section id='education'><h2>Educación</h2></section>
+	return <Section id='education' variant='secondary'><h2>Education</h2></Section>
 }
 
 export default Education

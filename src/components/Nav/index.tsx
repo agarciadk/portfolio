@@ -1,17 +1,22 @@
-import { FC } from 'react'
 import navItems from '../../mocks/navItems'
 import NavItem from './NavItem'
+import './Nav.css'
 
-const Nav: FC<{}> = () => {
+const Nav = () => {
 	return (
 		<nav>
-			{navItems.map(item =>
-				<NavItem
-					key={item.id}
-					href={item.href}
-					label={item.label}
-				/>
-			)}
+			<span className='logo'>Alberto<span className='green'>.</span></span>
+			<ul>
+				{navItems.map(item =>
+					<NavItem
+						key={item.id}
+						section={item.section}
+						label={item.label}
+						offset={item.offset}
+						border={item.border}
+					/>
+				)}
+			</ul>
 		</nav>
 	)
 }
