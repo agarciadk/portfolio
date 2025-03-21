@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import './Presentation.css'
-import downloadCV from '../../assets/download.svg'
+import './TypeWriter.css'
 import Section from '../Section'
 
 interface PresentationProps {
@@ -11,7 +11,9 @@ interface PresentationProps {
 const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 	return (
 		<Section className='presentation-wrapper' id='presentation'>
-			<span className='title green'>Hello I'm Alberto</span>
+			<div className='input-wrapper green'>
+				<span className='placeholder'></span>
+			</div>
 			<span className='position'>Software Engineer @ Minsait</span>
 			<span className='description'>Dedicated and dilient software engineer with a passion
 				for embracing new challenges. Committed to professional growth, I am eager to expand
@@ -31,7 +33,6 @@ const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 					Email me
 				</a> 
 				<a className='download-cv-btn' href='/Frontend_Developer-Alberto_Garcia_de_Paredes-CV.pdf' title='Download CV' download>
-					<img src={downloadCV} alt="download icon" className='icon' />
 					Download CV
 				</a>
 			</div>
