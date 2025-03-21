@@ -1,8 +1,9 @@
 /* Nav */
 nav {
-  min-width: 1280px;
+  min-width: 100vw;
   position: absolute;
   top: 0;
+  left: 0;
   overflow: hidden;
   padding: 16px;
   z-index: 2;
