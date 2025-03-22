@@ -6,7 +6,7 @@ const experiences: Experience[] = [
 		position: 'Software Engineer II',
 		sector: 'Finances',
 		business: 'B2B',
-		beginning: 'Juny, 2024',
+		beginning: '2024/06',
 		ending: 'Present',
 		location: 'Badajoz (Spain)',
 		responsibilities: [
@@ -40,8 +40,8 @@ const experiences: Experience[] = [
 		position: 'Software Consultant',
 		sector: 'Finances',
 		business: 'B2B',
-		beginning: 'January, 2024',
-		ending: 'Juny, 2024',
+		beginning: '2024/01',
+		ending: '2024/06',
 		location: 'Madrid (Spain)',
 		responsibilities: [
       {
@@ -60,8 +60,8 @@ const experiences: Experience[] = [
 		position: 'Frontend Developer',
 		sector: 'Finances',
 		business: 'B2B',
-		beginning: 'October, 2022',
-		ending: 'January, 2024',
+		beginning: '2022/10',
+		ending: '2024/01',
 		location: 'Salamanca (Spain)',
 		responsibilities: [
       {
