@@ -1,5 +1,6 @@
-div.background-primary {
-  max-width: 1280px;
+div.background-primary,
+div.background-secondary {
+  position: relative;
 }
 div.background-secondary::before {
   content: '';
