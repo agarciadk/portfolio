@@ -3,9 +3,7 @@
   display: block;
   font-family: monospace;
   font-size: 2em;
-  width: 55%;
-  letter-spacing: .15em; /* Adjust as needed */
-  white-space: nowrap; /* Keeps the content on a single line */
+  line-height: 2.2rem;
 }
 .input-wrapper > .placeholder {
   display: block;
