@@ -4,6 +4,7 @@
   font-family: monospace;
   font-size: 2em;
   line-height: 2.2rem;
+  margin: 1rem 0;
 }
 .input-wrapper > .placeholder {
   display: block;
