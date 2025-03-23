@@ -10,7 +10,7 @@ interface SectionProps {
 }
 export default function Section({ id, className, variant = 'primary', children }: SectionProps) {
   return (
-    <Element name={id}>
+    <Element name={id} id="scroll">
       <Background variant={variant}>
         <section className={className}>
           {children}
