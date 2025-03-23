@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import './Presentation.css'
 import './TypeWriter.css'
+import downloadCV from '../../assets/download.svg'
 import Section from '../Section'
 
 interface PresentationProps {
@@ -14,13 +15,13 @@ const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 			<div className='input-wrapper green'>
 				<span className='placeholder'></span>
 			</div>
-			<span className='position'>Software Engineer @ Minsait</span>
-			<span className='description'>Dedicated and dilient software engineer with a passion
+			<p className='position'>Software Engineer @ Minsait</p>
+			<p className='description'>Dedicated and dilient software engineer with a passion
 				for embracing new challenges. Committed to professional growth, I am eager to expand
 				my skill set. I excell as a collaborative team player, actively sharing my knowledge
 				and assisting others. I possess a keen eye for detail, ensuring meticulous attention
 				to even the smallest aspect.
-			</span>
+			</p>
 			<span className='years'>2+ years experience working</span>
 			<div className="actions">
 				<a
@@ -31,8 +32,10 @@ const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 					href='mailto:agarciadk@gmail.com'
 				>
 					Email me
-				</a> 
+				</a>
+				
 				<a className='download-cv-btn' href='/Frontend_Developer-Alberto_Garcia_de_Paredes-CV.pdf' title='Download CV' download>
+					<img src={downloadCV} alt="download icon" className='icon' />
 					Download CV
 				</a>
 			</div>
