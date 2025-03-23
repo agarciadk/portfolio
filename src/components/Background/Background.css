@@ -1,8 +1,14 @@
+div.background-primary {
+  max-width: 1280px;
+}
 div.background-primary, div.background-secondary {
-  width: 100vw;
   position: relative;
   padding: 2rem 0;
-  margin-left: calc(-50vw + 50%);
+  margin: 0 auto
+}
+div.background-secondary {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 .background-primary {
   background-color: var(--dark-background-color);
