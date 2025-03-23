@@ -1,47 +1,42 @@
 /* Experience */
 .experience-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  place-items: center;
 }
-.experience-section h1 {
-  grid-column: 1 / -1;
-  text-align: left;
+.row {
+  display: flex;
+  justify-content: space-between; /* O `start` si quieres alineado a la izquierda */
+  align-items: center;
+  gap: 20px; /* Espacio entre columnas */
+  inline-size: 100%;
 }
-.experience-section .experience-wrapper:nth-child(2) {
-  grid-column: 1 / 2;
-  grid-row: 2 / 2
+.title {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 20px;
 }
-.experience-section .arrow-down-right {
-  grid-column: 1 / 1;
-  grid-row: 3 / 3;
-  width: 96px;
-  height: 96px;
+.experience-section .experience-wrapper:nth-child(even) {
+  place-self: flex-end;
+}
+.arrow-down-right {
+  width: 88px;
+  height: 88px;
   fill: var(--primary-green);
-  place-self: center;
 }
-.experience-section .arrow-down-left {
-  grid-column: 2 / 2;
-  grid-row: 4 / 4;
-  width: 96px;
-  height: 96px;
+.experience-section .experience-wrapper:nth-child(odd) { /* Card de la derecha */
+  place-self: flex-start;
+}
+.arrow-down-left {
+  width: 88px;
+  height: 88px;
   fill: var(--primary-green);
-  place-self: center;
-}
-.experience-section .experience-wrapper:nth-child(3) {
-  grid-column: 2 / 2;
-  grid-row: 3 / 3;
-}
-.experience-section .experience-wrapper:nth-child(4) {
-  grid-column: 1 / 2;
-  grid-row: 4 / 4;
 }
 .experience-wrapper {
   background-color: var(--dark-card-background);
   color: var(--dark-card-font-color);
   border-radius: var(--card-border-radius, 15px);
-  margin-bottom: 30px;
   text-align: left;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 1.2s;
@@ -53,8 +48,7 @@
 .experience-header {
   border-top-right-radius: var(--card-border-radius);
   border-top-left-radius: var(--card-border-radius);
-  border-bottom: 1px solid #222;
-  padding: 0.5rem 3rem;
+  padding: 1.25rem 2.25rem;
 }
 .experience-description {
   display: none;
@@ -81,7 +75,7 @@
   display: flex;
   justify-content: space-between;
   opacity: 0.8;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 @media (prefers-color-scheme: light) {
   .experience-header {
@@ -93,7 +87,7 @@
     color: var(--light-card-font-color);
   }
 }
-@media (main-width: 1280px) {
+@media (min-width: 1280px) {
   .experience-wrapper {
     margin-left: 0;
   }
