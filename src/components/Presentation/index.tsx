@@ -35,8 +35,8 @@ const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
 				</a>
 				
 				<a className='download-cv-btn' href='/Frontend_Developer-Alberto_Garcia_de_Paredes-CV.pdf' title='Download CV' download>
-					<img src={downloadCV} alt="download icon" className='icon' />
 					Download CV
+					<img src={downloadCV} alt="download icon" className='icon' />
 				</a>
 			</div>
 		</Section>

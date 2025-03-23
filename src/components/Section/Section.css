@@ -1,9 +1,3 @@
-section {
-  display: grid;
-  place-self: center;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
 section h2 {
   position: relative;
   text-align: left;

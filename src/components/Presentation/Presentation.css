@@ -1,11 +1,11 @@
 /* Presentation */
 .presentation-wrapper {
-  height: 500px;
+  font-family: Consolas, Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   text-align: left;
   justify-content: space-evenly;
-  font-family: Consolas, Helvetica, Arial, sans-serif;
+  gap: 20px;
 }
 .presentation-wrapper .position {
   font-size: 2.5rem;
@@ -54,7 +54,7 @@
   font-size: .9em;
   color: var(--primary-white);
   cursor: pointer;
-  padding: 0.65rem 1.2rem;
+  padding: 0.65rem 0;
   width: max-content;
   opacity: 0.6;
   z-index: 1;
@@ -79,10 +79,6 @@
 }
 
 @media (max-width: 768px) {
-  .presentation-wrapper {
-    height: auto;
-    padding: 2rem;
-  }
   .presentation-wrapper .title {
     font-size: 1.5rem;
   }
@@ -92,7 +88,7 @@
   }
   .presentation-wrapper .description {
     font-size: 1rem;
-    width: 40ch;
+    width: 45ch;
   }
   .presentation-wrapper .years {
     font-size: 1.5rem;
@@ -102,10 +98,24 @@
     font-size: 0.8em;
   }
   .presentation-wrapper .download-cv-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     font-size: 0.8em;
   }
   .presentation-wrapper p { 
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 462px) {
+  .presentation-wrapper .description {
+    width: 33ch;
+  }
+  .presentation-wrapper .actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .presentation-wrapper .description {
+    width: 25ch;
   }
 }
