@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap&family=Montserrat:wght@400;700&family=Raleway&display=swap');
 
 :root {
-  font-family: 'Bungee', 'Raleway', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-  font-style: normal;
-
   color-scheme: light dark;
 
   --primary-blue: #09c;
@@ -45,7 +39,19 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+}
 body {
+  font-family: 'Bungee', 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+
   margin: 0 auto;
   text-align: center;
   place-items: center;
@@ -115,5 +121,11 @@ h1 {
       var(--light-background-color) 0%,
       var(--light-silver-metallic) 50%,
       var(--light-silver-sand) 100%);
+  }
+}
+
+@media (max-witdh: 768px) {
+  body {
+    font-size: 16px;
   }
 }

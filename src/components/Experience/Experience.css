@@ -40,6 +40,7 @@
   text-align: left;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 1.2s;
+  font-size: 1.1rem;
 }
 .experience-wrapper:hover {
   transform: translateY(-5px); /* Eleva la card ligeramente */
@@ -76,19 +77,4 @@
   justify-content: space-between;
   opacity: 0.8;
   margin-top: 1.2rem;
-}
-@media (prefers-color-scheme: light) {
-  .experience-header {
-    background: linear-gradient(
-      90deg,
-      var(--light-indigo-dye) 0%,
-      var(--light-lapis-lazuli) 65%,
-      var(--light-green-blue-crayola) 100%);
-    color: var(--light-card-font-color);
-  }
-}
-@media (min-width: 1280px) {
-  .experience-wrapper {
-    margin-left: 0;
-  }
 }

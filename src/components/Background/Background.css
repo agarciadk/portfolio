@@ -3,8 +3,7 @@ div.background-primary {
 }
 div.background-primary, div.background-secondary {
   position: relative;
-  padding: 2rem 0;
-  margin: 0 auto
+  padding: 2rem;
 }
 div.background-secondary {
   width: 100vw;
