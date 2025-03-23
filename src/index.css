@@ -3,6 +3,20 @@
 :root {
   color-scheme: light dark;
 
+  --black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--black-gradient: rgba(var(--gray-dark), 50%), rgba(var(--black));
+	--box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+  /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+    /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
   --primary-blue: #09c;
   --primary-purple: #9E193A;
   --primary-green: #079211; 
@@ -39,10 +53,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-html,body {
+html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   width: 100%;
 }
 body {
@@ -57,7 +72,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--dark-background-color);
+  background: linear-gradient(var(--black-gradient)) no-repeat;
   color: var(--dark-font-color);
   text-rendering: optimizeLegibility;
   font-synthesis: none;
