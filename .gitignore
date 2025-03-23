@@ -27,7 +27,6 @@ dist-ssr
 
 # lockfiles
 package-lock.json
-yarn.lock
 pnpm-lock.yaml
 
 # npm configuration
