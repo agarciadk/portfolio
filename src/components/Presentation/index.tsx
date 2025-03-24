@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import './Presentation.css'
-import './TypeWriter.css'
+import './Typewriter.css'
 import downloadCV from '../../assets/download.svg'
 import Section from '../Section'
 
