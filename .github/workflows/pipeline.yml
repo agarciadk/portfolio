@@ -11,30 +11,30 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Cancel Previous Redudant Builds
-        uses: styfle/cancel-workflow-action@0.10.0
+        uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
   install:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           cache: 'npm'
-          node-version: '22'
+          node-version-file: '.nvmrc'
   lint:
     needs: [install]
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           cache: 'npm'
-          node-version: '22'
+          node-version-file: '.nvmrc'
       - name: Install dependencies
         run: npm ci
       - name: Lint
@@ -44,18 +44,18 @@ jobs:
     needs: [install]
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v4
       with:
         cache: 'npm'
-        node-version: '22'
+        node-version-file: '.nvmrc'
     - name: Install dependencies
       run: npm ci
     - name: Build
       run: npm run build
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: dist
         path: dist
@@ -64,16 +64,16 @@ jobs:
     needs: [lint, build]
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v4
       with:
         cache: 'npm'
-        node-version: '22'
+        node-version-file: '.nvmrc'
     - name: Install dependencies
       run: npm ci
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4
       with:
         name: dist
         path: dist
@@ -84,10 +84,10 @@ jobs:
     needs: [test]
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
