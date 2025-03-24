@@ -5,11 +5,7 @@ import './TypeWriter.css'
 import downloadCV from '../../assets/download.svg'
 import Section from '../Section'
 
-interface PresentationProps {
-	profilePic: string
-}
-
-const Presentation: FC<PresentationProps> = ({ profilePic }): JSX.Element => {
+const Presentation: FC = (): JSX.Element => {
 	return (
 		<Section className='presentation-wrapper' id='presentation'>
 			<div className='input-wrapper green'>
