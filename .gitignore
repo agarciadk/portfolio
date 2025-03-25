@@ -31,3 +31,6 @@ pnpm-lock.yaml
 
 # npm configuration
 .npmrc
+
+# coverage
+coverage
