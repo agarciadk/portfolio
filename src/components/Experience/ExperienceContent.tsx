@@ -41,7 +41,7 @@ const ExperienceContent: FC<ExperienceProps> = ({
 			<p className='m-0 opacity-8'><small>{location}</small></p>
 		</div>
 		<div className='experience-description mx-2'>
-			<h4>Resposibilities</h4>
+			<h4>Responsibilities</h4>
 			{responsibilities.map(({ title, description }) => <Responsibility key={title} title={title} description={description} />)}
 			<h4 className='mt-1'>Key Accomplishments</h4>
 			{keys.map(({ title, description }) => <Key key={title} title={title} description={description} />)}
