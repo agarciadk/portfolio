@@ -13,13 +13,13 @@ describe('Experience', () => {
 	it('should render title correctly', () => {
 		render(<Experience />)
 
-		screen.getByText('Experiencia')
+		screen.getByText('Experience')
 	})
 
-	it('should render 2 rows', () => {
+	it('should render 3 rows', () => {
 		render(<Experience />)
 
 		const rows = screen.getAllByRole('row')
-		expect(rows).toHaveLength(2)
+		expect(rows).toHaveLength(3)
 	})
 })

@@ -1,19 +1,19 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, it } from 'vitest'
-// eslint-disable-next-line no-unused-vars
 import { ExperienceContent } from '../src/components'
+import * as Mock from './utils/mocks'
 
 describe('ExperienceContent', () => {
 	afterEach(cleanup)
 
 	it('should render', () => {
-		render(<ExperienceContent />)
+		render(<ExperienceContent {...Mock.experienceContentMock} />)
 	})
 
 	it('should render Keys and Functionality correctly', () => {
-		render(<ExperienceContent />)
+		render(<ExperienceContent {...Mock.experienceContentMock} />)
 
-		screen.getByText('Keys')
-		screen.getByText('Functionality')
+		screen.getByText('Responsibilities')
+		screen.getByText('Key Accomplishments')
 	})
 })

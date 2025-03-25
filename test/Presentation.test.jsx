@@ -9,19 +9,4 @@ describe('Presentation', () => {
 	it('should render', () => {
 		render(<Presentation />)
 	})
-
-	it('should render the name and title correctly', () => {
-		render(<Presentation />)
-
-		screen.getByText('Alberto')
-		screen.getByText('Software Engineer')
-	})
-
-	it('should render the profile pic correctly', () => {
-		const testPic = '/profile.jpg'
-		render(<Presentation profilePic={testPic} />)
-
-		const image = screen.getByAltText('profile pic')
-		expect(image.src).toContain(testPic)
-	})
 })

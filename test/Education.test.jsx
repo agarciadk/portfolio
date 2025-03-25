@@ -13,6 +13,6 @@ describe('Education', () => {
 	it('should render title correctly', () => {
 		render(<Education />)
 
-		screen.getByText('Educación')
+		screen.getByText('Education')
 	})
 })

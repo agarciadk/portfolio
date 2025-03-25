@@ -13,7 +13,7 @@ describe('Projects', () => {
 	it('should render title correctly', () => {
 		render(<Projects />)
 
-		screen.getByText('Proyectos')
+		screen.getByText('Projects')
 	})
 
 	it('should render 3 columns', () => {
