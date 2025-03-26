@@ -1,7 +1,6 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-// eslint-disable-next-line no-unused-vars
-import { ProjectCard } from '../src/components'
+import ProjectCard from '@/components/Projects/ProjectCard'
 
 const projectCardProps = {
 	title: 'Proyecto 1',

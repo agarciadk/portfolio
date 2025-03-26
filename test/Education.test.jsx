@@ -1,7 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, it } from 'vitest'
-// eslint-disable-next-line no-unused-vars
-import { Education } from '../src/components'
+import Education from '@/components/Education/Education'
 
 describe('Education', () => {
 	afterEach(cleanup)
