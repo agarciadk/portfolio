@@ -1,0 +1,92 @@
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  place-items: center;
+  padding: $spacing-lg 0;
+
+  .experience-wrapper {
+    background-color: var(--dark-card-background);
+    color: var(--dark-card-font-color);
+    border-radius: var(--card-border-radius, 15px);
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 1.2s;
+    font-size: 1.1rem;
+    font-family: Consolas, monospace;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    &:nth-child(even) {
+      place-self: flex-end;
+    }
+
+    &:nth-child(odd) {
+      place-self: flex-start;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-lg;
+  inline-size: 100%;
+}
+
+.title {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: $spacing-lg;
+}
+
+.arrow-down-right,
+.arrow-down-left {
+  width: 88px;
+  height: 88px;
+  fill: var(--primary-green);
+}
+
+.experience-header {
+  border-top-right-radius: var(--card-border-radius);
+  border-top-left-radius: var(--card-border-radius);
+  padding: 1.25rem 2.25rem;
+}
+
+.experience-description {
+  display: none;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  padding: 0.5rem 3rem;
+
+  p, h3, ul, ol {
+    opacity: 0.8;
+  }
+
+  p, ul, ol {
+    font-size: 0.8rem;
+  }
+
+  ul {
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ol {
+    margin-left: 1.5rem;
+  }
+}
+
+.experience-date {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  margin-top: 1.2rem;
+} 

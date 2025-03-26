@@ -1,6 +1,6 @@
 import { JSX, } from 'react/jsx-runtime'
-import { Project, Language } from '../../types'
-import hashLanguages from '../../utils/hashLanguages'
+import { Project, Language } from '@/types'
+import hashLanguages from '@/utils/hashLanguages'
 import { FC, useState } from 'react';
 import './ProjectCard.css'
 

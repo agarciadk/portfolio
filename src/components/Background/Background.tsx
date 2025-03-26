@@ -1,13 +1,18 @@
-import './Background.css';
+import { FC, ReactNode } from 'react'
+import { JSX } from 'react/jsx-runtime'
+import './Background.scss'
 
 interface BackgroundProps {
-  variant?: 'primary' | 'secondary';
-  children: React.ReactNode;
+	children: ReactNode
+	variant?: 'primary' | 'secondary'
 }
-export default function Background({ variant = 'primary', children } : BackgroundProps) {
-  return (
-    <div className={`background-${variant}`}>
-      {children}
-    </div>
-  )
+
+const Background: FC<BackgroundProps> = ({ children, variant = 'primary' }): JSX.Element => {
+	return (
+		<div className={`background-${variant}`}>
+			{children}
+		</div>
+	)
 }
+
+export default Background

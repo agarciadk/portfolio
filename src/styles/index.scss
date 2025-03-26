@@ -1,58 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap&family=Montserrat:wght@400;700&family=Raleway&display=swap');
-
 :root {
   color-scheme: light dark;
 
   --black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--black-gradient: rgba(var(--gray-dark), 50%), rgba(var(--black));
-	--box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-  /* shadow ring 👇 */
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  --gray-dark: 34, 41, 57;
+  --gray-gradient: linear-gradient(
+      125deg,
+      var(--light-background-color) 0%,
+      var(--light-silver-metallic) 50%,
+      var(--light-silver-sand) 100%);
+  --black-gradient: rgba(var(--gray-dark), 50%), rgba(var(--black));
+  --box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
     0 0 0 1px hsla(0, 0%, 0%, 0.05),
-    /* multiple soft shadows 👇 */
     0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
     0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
     0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 
   --primary-blue: #09c;
   --primary-purple: #9E193A;
-  --primary-green: #079211; 
+  --primary-green: #079211;
   --primary-dark-green: #045e0b;
   --primary-white: #fff;
   --card-border-radius: 15px;
-  /* dark scheme */
+
+  // Dark scheme
   --dark-font-color: rgba(255, 255, 255, 0.87);
   --dark-nav-background-color: #213547;
   --dark-background-color: #101017;
   --dark-card-font-color: #ffffff;
   --dark-card-background: #313131;
 
-  --dark-indigo-dye: #013d65;
-  --dark-prussian-blue: #07314b;
-  --dark-sonic-silver: #737178;
-  --dark-sapphire-blue: #025e8d;
-  --dark-rhythm: #737482;
-  /* light scheme */
+  // Light scheme
   --light-font-color: #213547;
   --light-nav-background-color: #213547;
   --light-background-color: #f9f9f9;
   --light-card-font-color: rgba(255, 255, 255, 0.87);
   --light-card-background: #213547;
-
   --light-lapis-lazuli: #0261a1;
   --light-indigo-dye: #0a4e78;
   --light-silver-metallic: #b5b3b8;
   --light-green-blue-crayola: #0394dd;
   --light-silver-sand: #bcbdc4;
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -60,13 +58,13 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
 body {
-  font-family: 'Bungee', 'Raleway', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  line-height: 24px;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   font-weight: 400;
   font-style: normal;
-
   margin: 0 auto;
   text-align: center;
   place-items: center;
@@ -80,67 +78,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: $font-family-secondary;
 }
+
 a {
   font-weight: 500;
   color: rgb(96, 195, 228);
   text-decoration: inherit;
+
+  &:hover {
+    color: var(--primary-blue);
+  }
 }
-a:hover {
-  color: var(--primary-blue);
-}
+
 h1 {
   font-size: 3.2em;
   font-weight: 700;
   line-height: 1.1;
 }
-.m-0 {
-  margin: 0;
-}
-.ml-2 {
-  margin-left: 2rem;
-}
-.mx-2 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.mt-1 {
-  margin-top: 1rem;
-}
-.t-justify {
-  text-align: justify;
-}
-.opacity-9 {
-  opacity: .9;
-}
-.opacity-8 {
-  opacity: .8;
-}
-.purple {
-  color: var(--primary-purple);
-}
-.green {
-  color: var(--primary-green);
-}
-.icon {
-  width: 24px;
-  height: 24px;
-}
+
+// Utility classes
+.m-0 { margin: 0; }
+.ml-2 { margin-left: 0.5rem; }
+.mx-2 { margin: 0 0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.t-justify { text-align: justify; }
+.opacity-9 { opacity: 0.9; }
+.opacity-8 { opacity: 0.8; }
+
+// Color classes
+.purple { color: var(--primary-purple); }
+.green { color: var(--primary-green); }
+.icon { width: 1.5rem; height: 1.5rem; }
+
+// Media queries
 @media (prefers-color-scheme: light) {
   body {
+    background: var(--gray-gradient);
     color: var(--light-font-color);
-    background: linear-gradient(
-      125deg,
-      var(--light-background-color) 0%,
-      var(--light-silver-metallic) 50%,
-      var(--light-silver-sand) 100%);
-  }
-}
-
-@media (max-witdh: 768px) {
-  body {
-    font-size: 16px;
   }
 }

@@ -1,5 +1,5 @@
 import { JSX } from 'react/jsx-dev-runtime'
-import Section from '../Section'
+import Section from '@/components/Section/Section'
 import './Education.css'
 
 const Education = (): JSX.Element => {

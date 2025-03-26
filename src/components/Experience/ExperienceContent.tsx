@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Experience as ExperienceProps } from '../../types'
-import './ExperienceContent.css'
+import { Experience as ExperienceProps } from '@/types'
+import './ExperienceContent.scss'
 
 const Responsibility: FC<{ title: string, description?: string[] }> = ({ title, description = [] }) => (
 	<ul>

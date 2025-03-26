@@ -1,5 +1,5 @@
 import { JSX } from 'react/jsx-runtime'
-import Section from '../Section'
+import Section from '@/components/Section/Section'
 import './Skills.css'
 
 const Skills = (): JSX.Element => {

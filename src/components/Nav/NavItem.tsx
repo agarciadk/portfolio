@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { Link } from 'react-scroll'
-import './NavItem.css'
 
 interface NavItemProps {
 	section: string
