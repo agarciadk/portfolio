@@ -48,7 +48,9 @@
 * {
   padding: 0;
   margin: 0;
+  border: 0;
   box-sizing: border-box;
+  vertical-align: baseline;
 }
 
 html, body {
@@ -65,9 +67,7 @@ body {
   line-height: $line-height-base;
   font-weight: 400;
   font-style: normal;
-  margin: 0 auto;
   text-align: center;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(var(--black-gradient)) no-repeat;
@@ -92,7 +92,6 @@ a {
     color: var(--primary-blue);
   }
 }
-
 h1 {
   font-size: 3.2em;
   font-weight: 700;

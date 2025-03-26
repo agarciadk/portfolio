@@ -1,22 +1,37 @@
-nav {
-  box-sizing: border-box;
-  width: 100vw;
-  position: absolute;
+.header {
+  position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden;
-  padding: 1rem 2rem;
-  z-index: 2;
+  right: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $font-family-nav;
   font-weight: 700;
-  background-color: rgba(var(--black), 0.9);
   box-shadow: var(--box-shadow);
+  
+  @media only screen and (min-width: 64.063rem) {
+    min-width: 50rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: rgba(var(--black), 0.9);
+    border-radius: 6.25rem
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 1rem;
+    @media only screen and (min-width: 64.063rem) {
+      padding:.5rem .75rem .5rem 2rem;
+      gap: 3.5rem
+    }
+  }
 
   span.logo {
     margin-right: auto;
@@ -24,7 +39,7 @@ nav {
     font-size: 1.5rem;
   }
 
-  ul {
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -76,6 +91,7 @@ nav {
         border: 2px solid var(--primary-green);
         padding: 0.5rem 1rem;
         transition: transform 0.2s;
+        border-radius: 100px;
 
         &:hover {
           transform: translateY(-2px);
@@ -83,16 +99,25 @@ nav {
       }
     }
   }
+}
+.header.sticky {
+  z-index: 40;
+  animation: slideDown .75s ease-in-out;
 
-  @media (prefers-color-scheme: light) {
-    background-color: var(--light-lapis-lazuli);
-  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%)
+    }
 
-  @media (max-width: 768px) {
-    min-width: 100vw;
+    100% {
+      transform: translateY(0)
+    }
   }
-
-  @media (max-width: 320px) and (orientation: portrait) {
-    min-width: 100vw;
-  }
-} 
+}
+.header-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 75rem;
+  position: relative;
+  flex-direction: row;
+}

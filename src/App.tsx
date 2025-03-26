@@ -1,21 +1,21 @@
 import { JSX } from 'react/jsx-runtime'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
-import Nav from './components/Nav/Nav'
+import Header from './components/Header/Header'
+import Main from './components/Main/Main'
 import Presentation from './components/Presentation/Presentation'
 import Skills from './components/Skills/Skills'
-import Wrapper from './components/Wrapper/Wrapper'
 
 function App (): JSX.Element {
 	return (
 		<>
-			<Nav />
-			<Wrapper>
+			<Header />
+			<Main>
 				<Presentation />
 				<Experience />
-				<Education />
 				<Skills />
-			</Wrapper>
+				<Education />
+			</Main>
 		</>
 	)
 }
