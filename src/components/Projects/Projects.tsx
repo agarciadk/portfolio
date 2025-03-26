@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import mockProjects from '@/mocks/projects'
 import Section from '@/components/Section/Section'
-import ProjectCard from './ProjectCard'
+import ProjectCard from '@/components/Projects/ProjectCard'
 import './Projects.scss'
 
-export const Projects: FC = (): JSX.Element => {
+const Projects: FC = (): JSX.Element => {
 	return (
 		<Section className='projects-section' id='projects'>
 			<div className='title'>
@@ -19,3 +19,5 @@ export const Projects: FC = (): JSX.Element => {
 		</Section>
 	)
 }
+
+export default Projects

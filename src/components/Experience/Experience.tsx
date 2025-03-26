@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import experiences from '@/data/experiences'
-import { ArrowDownLeft } from '@/components/Icons/ArrowDownLeft'
-import { ArrowDownRight } from '@/components/Icons/ArrowDownRight'
+import ArrowDownLeft from '@/components/Icons/ArrowDownLeft'
+import ArrowDownRight from '@/components/Icons/ArrowDownRight'
 import Section from '@/components/Section/Section'
-import ExperienceContent from './ExperienceContent'
+import ExperienceContent from '@/components/Experience/ExperienceContent'
 import './Experience.scss'
 
 const calculatePositionArrowDownRight = (idx: number) => {

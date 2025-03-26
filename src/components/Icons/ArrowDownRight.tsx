@@ -1,4 +1,6 @@
-export const ArrowDownRight = () => {
+import { JSX } from 'react/jsx-dev-runtime'
+
+const ArrowDownRight = (): JSX.Element => {
   return (
     <svg className="arrow-down-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <polygon
@@ -7,3 +9,5 @@ export const ArrowDownRight = () => {
     </svg>
   )
 }
+
+export default ArrowDownRight
