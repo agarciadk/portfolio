@@ -1,6 +1,27 @@
 section {
-  min-width: 800px;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
+  min-width: 1024px;
+  @media (max-width: $breakpoint-large-desktop) {
+    min-width: 900px;
+  }
+  @media (max-width: $breakpoint-desktop) {
+    min-width: 800px;
+  }
+  @media (max-width: $breakpoint-large-tablet) {
+    min-width: 700px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    min-width: 570px;
+  }
+  @media (max-width: $breakpoint-small-tablet) {
+    min-width: 460px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    min-width: 300px;
+  }
+  @media (max-width: $breakpoint-small-mobile) {
+    min-width: 280px;
+  }
   h2 {
     position: relative;
     text-align: left;
@@ -18,9 +39,10 @@ section {
       background-color: var(--primary-green);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet) {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
   }
 } 
+

@@ -5,7 +5,7 @@
   font-family: monospace;
   font-size: 2.5em;
   line-height: 2.2rem;
-  height: 100px;
+  margin-bottom: 1rem;
   > .placeholder {
     display: block;
     appearance: none;
@@ -24,5 +24,8 @@
         caret-space: 2px
       )
     );
+  }
+  @media (max-width: $breakpoint-tablet) {
+    height: 60px;
   }
 }
