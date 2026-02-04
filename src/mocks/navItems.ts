@@ -23,12 +23,12 @@ const navItems = [
 		// section: 'education',
 		// offset: -30
 	// },
-	// {
-		// id: 4,
-		// label: 'Skills',
-		// section: 'skills',
-		// offset: -30
-	// },
+	{
+		id: 4,
+		label: 'Skills',
+		section: 'skills',
+		offset: -30
+	},
 	{
 		id: 5,
 		label: 'Contact',
