@@ -28,7 +28,7 @@
   }
 
   .years {
-    width: 27ch;
+    max-width: 27ch;
     font-weight: 700;
     font-size: 2rem;
     line-height: 1;
@@ -37,7 +37,7 @@
   .actions {
     display: flex;
     gap: $spacing-lg;
-    width: 100%;
+    max-width: 100%;
     font-family: $font-family-secondary;
   }
 

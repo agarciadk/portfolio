@@ -64,13 +64,14 @@
     }
   }
 
-  .experience-item {
-    grid-column: right;
+  .experience-item.left, .experience-item.right {
+    grid-column: 1 / -1;
+    justify-self: start;
     padding-left: 2rem;
-    padding-right: 0;
+    padding-right: 0rem;
+  }
 
-    &::before {
-      left: -6px;
-    }
+  .experience-item.left::before, .experience-item.right::before {
+    left: 10px;
   }
 }

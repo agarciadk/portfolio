@@ -10,11 +10,9 @@ const Experience: FC = (): JSX.Element => {
 		<Section className='experience-section' id='experience' title='Experience'>
 			<div className='timeline'>
 				{experiences.map((experience, idx) => 
-					<>
-			 			<div className={`experience-item ${idx % 2 === 0 ? 'left' : 'right'}`} key={`experience-${idx}`}>
-							<ExperienceContent key={experience.company} {...experience} />
-						</div>
-					</>
+			 		<div className={`experience-item ${idx % 2 === 0 ? 'left' : 'right'}`} key={`experience-${idx}`}>
+						<ExperienceContent key={experience.company} {...experience} />
+					</div>
 				)}
 			</div>
 		</Section>
