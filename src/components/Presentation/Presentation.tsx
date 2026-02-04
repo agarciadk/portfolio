@@ -11,7 +11,7 @@ const Presentation: FC = (): JSX.Element => {
 			<div className='input-wrapper green'>
 				<span className='placeholder'></span>
 			</div>
-			<p className='position'>Software Engineer <mark className='highlight-text'>@ Minsait</mark></p>
+			<p className='position'>Software Engineer at <mark className='metal-green'>Minsait</mark></p>
 			<p className='description'>Dedicated and dilient software engineer with a passion
 				for embracing new challenges. Committed to professional growth, I am eager to expand
 				my skill set. I excell as a collaborative team player, actively sharing my knowledge

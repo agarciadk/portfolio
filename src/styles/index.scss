@@ -70,7 +70,7 @@ body {
   text-align: center;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(var(--black-gradient)) no-repeat;
+  background-color: #1a1e26;
   color: var(--dark-font-color);
   text-rendering: optimizeLegibility;
   font-synthesis: none;
@@ -111,6 +111,21 @@ h1 {
 .purple { color: var(--primary-purple); }
 .green { color: var(--primary-green); }
 .icon { width: 1.5rem; height: 1.5rem; }
+
+.container {
+  max-width: 59rem; // mismo ancho que el nav
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding:  0 0.75rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 0.5rem;
+  }
+}
 
 // Media queries
 @media (prefers-color-scheme: light) {

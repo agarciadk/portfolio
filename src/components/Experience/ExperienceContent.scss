@@ -1,6 +1,36 @@
 .subtitle {
-  color: var(--primary-purple);
-  opacity: 0.7;
+  font-weight: 800;
+  background: linear-gradient(
+    180deg,
+    #f3b3c2 0%,
+    #c44a6d 25%,
+    #9E193A 50%,
+    #6e0f26 70%,
+    #3b0614 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.35),
+    0 -1px 1px rgba(0, 0, 0, 0.45);
+}
+
+.metal-wine {
+  font-weight: 800;
+
+  background: linear-gradient(
+    180deg,
+    #c12c52 0%,
+    #7a102c 55%,
+    #54091d 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -8,3 +38,76 @@
     color: var(--light-green-blue-crayola);
   }
 } 
+
+.metal-green {
+  font-weight: 800;
+   background: linear-gradient(
+    180deg,
+    #9cffb1 0%,
+    #3bcf6a 25%,
+    #079211 50%,
+    #2e7d32 70%,
+    #0b3d1a 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-header {
+  border-top-right-radius: var(--card-border-radius);
+  border-top-left-radius: var(--card-border-radius);
+  padding: 1.25rem 2.25rem;
+}
+
+.experience-description {
+  display: none;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  padding: 0.5rem 3rem;
+
+  p, h3, ul, ol {
+    opacity: 0.8;
+  }
+
+  p, ul, ol {
+    font-size: 0.8rem;
+  }
+
+  ul {
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ol {
+    margin-left: 1.5rem;
+  }
+}
+
+.experience-date {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  margin-top: 1.2rem;
+}
+
+.experience-wrapper {
+  background-color: rgba(var(--black), 0.7);
+  color: var(--dark-card-font-color);
+  border-radius: var(--card-border-radius, 15px);
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 1.2s;
+  font-size: 1.1rem;
+  font-family: Consolas, monospace;
+  box-shadow: var(--box-shadow);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+  }
+}

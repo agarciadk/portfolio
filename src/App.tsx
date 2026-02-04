@@ -1,5 +1,4 @@
 import { JSX } from 'react/jsx-runtime'
-import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
@@ -14,7 +13,6 @@ function App (): JSX.Element {
 				<Presentation />
 				<Experience />
 				<Skills />
-				<Education />
 			</Main>
 		</>
 	)

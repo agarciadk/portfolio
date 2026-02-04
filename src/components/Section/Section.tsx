@@ -5,19 +5,23 @@ import Background from '@/components/Background/Background'
 import './Section.scss'
 
 interface SectionProps {
-	children: ReactNode
+	children?: ReactNode
 	className?: string
 	id: string
+	title: string
 	variant?: 'primary' | 'secondary'
 }
 
-const Section: FC<SectionProps> = ({ children, className = '', id, variant = 'primary' }): JSX.Element => {
+const Section: FC<SectionProps> = ({ children, className = '', id, title = '', variant = 'primary' }): JSX.Element => {
 	return (
-		<Element name={id} id="scroll">
+		<Element name={id} id='scroll'>
 			<Background variant={variant}>
-				<section className={className} id={id}>
-					{children}
-				</section>
+				<div className='container'>
+					<section className={className} id={id}>
+						{title && <h2 title={title} className='title'>{title}</h2>}
+						{children}
+					</section>
+				</div>
 			</Background>
 		</Element>
 	)

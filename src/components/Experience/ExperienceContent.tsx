@@ -33,7 +33,7 @@ const ExperienceContent: FC<ExperienceProps> = ({
 }) => (
 	<div className='experience-wrapper' role='row'>
 		<div className='experience-header'>
-			<h3 className='m-0'><span className='subtitle'>{position}</span> at <span className='green'>{company}</span></h3>
+			<h3 className='m-0'><span className='metal-wine'>{position}</span> at <span className='metal-green'>{company}</span></h3>
 			<div className='experience-date'>
 				<p className='m-0'><small>{beginning} - {ending}</small></p>
 				<p className='m-0'><small>{sector} ({business})</small></p>
