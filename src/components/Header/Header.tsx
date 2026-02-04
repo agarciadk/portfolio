@@ -47,14 +47,9 @@ const Header: FC = (): JSX.Element => {
 						{isOpen ? <Close /> : <HamburgerMenu />}
 					</button>
 					<span className='logo'>Alberto<span className='green'>.</span></span>
-					<NavItem
-						className='contact-button-mobile'
-						key={lastItem.id}
-						section={lastItem.section}
-						label={lastItem.label}
-						offset={lastItem.offset}
-						border={lastItem.border}
-						/>
+					<a className='contact-button-mobile border-green' href='mailto:agarciadk@gmail.com'>
+						{lastItem.label}
+					</a>
 				</div>
 				<nav className={`header__nav${isOpen ? ' open' : ''}`} aria-expanded={isOpen} style={navStyle}>
 					<ul className='header__nav-list'>
@@ -68,13 +63,9 @@ const Header: FC = (): JSX.Element => {
 							/>
 							</li>
 						)}
-						<NavItem
-							className='contact-button-desktop'
-							section={lastItem.section}
-							label={lastItem.label}
-							offset={lastItem.offset}
-							border={lastItem.border}
-							/>
+						<a className='contact-button-desktop border-green' href='mailto:agarciadk@gmail.com'>
+							{lastItem.label}
+						</a>
 					</ul>
 				</nav>
 			</div>

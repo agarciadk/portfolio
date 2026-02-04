@@ -18,11 +18,11 @@ const Presentation: FC = (): JSX.Element => {
 				and assisting others. I possess a keen eye for detail, ensuring meticulous attention
 				to even the smallest aspect.
 			</p>
-			<span className='years'>2+ years experience working</span>
+			<span className='years'>3+ years experience working</span>
 			<div className="actions">
 				<a
 					role='button'
-					className='email-me-btn'
+					className='email-me-btn border-green'
 					target='_blank'
 					title='Email me'
 					href='mailto:agarciadk@gmail.com'

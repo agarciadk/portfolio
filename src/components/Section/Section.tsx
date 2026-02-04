@@ -8,7 +8,7 @@ interface SectionProps {
 	children?: ReactNode
 	className?: string
 	id: string
-	title: string
+	title?: string
 	variant?: 'primary' | 'secondary'
 }
 

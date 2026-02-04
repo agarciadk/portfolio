@@ -12,7 +12,12 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(255, 255, 255, .15);
+    background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
     transform: translateX(-50%);
   }
 }
@@ -22,6 +27,15 @@
   display: grid;
   position: relative;
   max-width: 26rem;
+}
+
+.experience-item::after {
+  content: '';
+  position: absolute;
+  top: calc(1.5rem + 5px);
+  width: 2rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .experience-item::before {
@@ -45,6 +59,10 @@
   right: -1rem;
 }
 
+.experience-item.left::after {
+  right: -2.5rem;
+}
+
 .experience-item.right {
   grid-column: 3;
   justify-self: end;
@@ -53,6 +71,10 @@
 
 .experience-item.right::before {
   left: -1rem;
+}
+
+.experience-item.right::after {
+  left: -2.5rem;
 }
 
 @media (max-width: $breakpoint-tablet) {
@@ -67,11 +89,15 @@
   .experience-item.left, .experience-item.right {
     grid-column: 1 / -1;
     justify-self: start;
-    padding-left: 2rem;
+    padding-left: 3rem;
     padding-right: 0rem;
   }
 
   .experience-item.left::before, .experience-item.right::before {
-    left: 10px;
+    left: 1.5rem;
+  }
+
+  .experience-item.left::after, .experience-item.right::after {
+    left: -1px;
   }
 }

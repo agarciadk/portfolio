@@ -7,10 +7,11 @@ interface NavItemProps {
 	offset?: number
 	border?: boolean
 	className?: string
+	href?: string
 }
-const NavItem: FC<NavItemProps> = ({ section, label, offset = 0, border = false, className = '' }) => {
+const NavItem: FC<NavItemProps> = ({ section, label, offset = 0, border = false, className = '' , href = '' }) => {
 	const hasBorder = border ? `border-green ${className}` : className;
-	return <Link to={section} smooth={true} duration={500} offset={offset} className={hasBorder}>{label}</Link>
+	return <Link to={section} smooth={true} duration={500} offset={offset} className={hasBorder} href={href}>{label}</Link>
 }
 
 export default NavItem
