@@ -77,16 +77,30 @@
   left: -2.5rem;
 }
 
+@media (max-width: 940px) {
+  .experience-item::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: $breakpoint-large-tablet) {
+  .experience-item {
+    max-width: 25rem;
+  }
+}
+
 @media (max-width: $breakpoint-tablet) {
   .timeline {
     grid-template-columns: 20px 1fr;
 
     &::before {
-      left: 0;
+      left: calc(50% - 13rem);
     }
   }
 
   .experience-item.left, .experience-item.right {
+    margin: 0 auto;
     grid-column: 1 / -1;
     justify-self: start;
     padding-left: 3rem;
@@ -99,5 +113,12 @@
 
   .experience-item.left::after, .experience-item.right::after {
     left: -1px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .experience-item::after {
+    width: 0;
+    height: 0;
   }
 }

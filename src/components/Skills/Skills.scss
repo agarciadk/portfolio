@@ -10,17 +10,35 @@
 .skills-marquee {
   overflow: hidden;
   width: 100%;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
 .skills-track {
   display: flex;
   width: max-content;
+  justify-content: space-evenly;
   animation: scroll 30s linear infinite;
   will-change: transform;
 }
 
 .skills-row {
   display: flex;
+  justify-content: space-between;
   gap: 3rem;
   padding-right: 3rem;
 }
@@ -60,5 +78,17 @@ ul {
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .skills-marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    )
   }
 }
