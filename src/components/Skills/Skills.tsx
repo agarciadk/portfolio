@@ -9,58 +9,18 @@ import Git from '../Icons/Git';
 import './Skills.scss'
 
 const Skills = (): JSX.Element => {
+	const icons = [Javascript, LitElement, Node, CSS, Git, Typescript];
 	return <Section id='skills' title='Skills'>
 		<div className='skills-section'>
 			<div className='skills-marquee'>
 				<div className='skills-track'>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
-					<ul className='skills-row'>
-						<li className='skills-icon'><Javascript /></li>
-						<li className='skills-icon'><LitElement /></li>
-						<li className='skills-icon'><Node /></li>
-						<li className='skills-icon'><CSS /></li>
-						<li className='skills-icon'><Git /></li>
-						<li className='skills-icon'><Typescript /></li>
-					</ul>
+					{[...Array(10).keys()].map(() =>
+						<ul className='skills-row'>
+						{icons.map((element) =>
+							<li className='skills-icon'>{element()}</li>
+						)}
+						</ul>
+					)}
 				</div>
 			</div>
 		</div>
