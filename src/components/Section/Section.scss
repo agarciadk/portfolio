@@ -2,28 +2,54 @@ section {
   padding: 1.5rem 0;
   width: 100%;
 
-  h2 {
-    position: relative;
-    text-align: left;
-    font-size: 2rem;
+  .section-heading {
     display: flex;
-    align-self: flex-start;
+    align-items: center;
+    gap: $spacing-md;
     margin-bottom: $spacing-lg;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -0.7rem;
-      width: 3rem;
-      height: 0.2rem;
-      border-radius: 99px;
-      background-color: var(--primary-green);
+    font-family: $font-family-tertiary;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h2.title {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-align: left;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    margin: 0;
+
+    .title-hash {
+      color: var(--primary-green);
     }
 
     @media (min-width: $breakpoint-tablet) {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  .title-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--primary-green);
+  }
+
+  .title-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: transform 0.2s, opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+      transform: translateX(2px);
     }
   }
 }

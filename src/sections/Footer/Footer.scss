@@ -1,0 +1,109 @@
+.footer {
+  width: 100%;
+  margin-top: 4rem;
+  padding: 2.5rem 0 1.5rem;
+  font-family: $font-family-tertiary;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dark-font-color);
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing-lg;
+}
+
+.footer__brand {
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    .green {
+      color: var(--primary-green);
+    }
+  }
+
+  .footer__tagline {
+    margin-top: 0.5rem;
+    opacity: 0.6;
+    font-size: 0.85rem;
+    max-width: 30ch;
+  }
+}
+
+.footer__nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.25rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.2s, color 0.2s;
+
+    &:hover {
+      opacity: 1;
+      color: var(--primary-green);
+    }
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  .footer__social-links {
+    display: flex;
+    gap: $spacing-md;
+    color: white;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      transition: opacity 0.2s, transform 0.2s;
+
+      img {
+        width: 1.75rem;
+        height: 1.75rem;
+        // los svg son monocromos oscuros por defecto; se invierten a blanco para el fondo oscuro del footer
+        filter: brightness(0) invert(1);
+      }
+
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.footer__copy {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__nav ul {
+    justify-content: center;
+  }
+}

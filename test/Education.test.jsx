@@ -12,6 +12,6 @@ describe('Education', () => {
 	it('should render title correctly', () => {
 		render(<Education />)
 
-		screen.getByText('Education')
+		screen.getByRole('heading', { name: 'Education' })
 	})
 })

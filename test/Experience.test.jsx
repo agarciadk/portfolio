@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import Experience from '@/components/Experience/Experience'
+import Experience from '@/sections/Experience/Experience'
 
 describe('Experience', () => {
 	afterEach(cleanup)
@@ -12,7 +12,7 @@ describe('Experience', () => {
 	it('should render title correctly', () => {
 		render(<Experience />)
 
-		screen.getByText('Experience')
+		screen.getByRole('heading', { name: 'Experience' })
 	})
 
 	it('should render 3 rows', () => {

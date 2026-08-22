@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import experiences from '@/data/experiences'
 import Section from '@/components/Section/Section'
-import ExperienceContent from '@/components/Experience/ExperienceContent'
+import ExperienceContent from '@/sections/Experience/ExperienceContent'
 import './Experience.scss'
 
 const Experience: FC = (): JSX.Element => {

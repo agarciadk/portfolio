@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, it } from 'vitest'
-import ExperienceContent from '@/components/Experience/ExperienceContent'
+import ExperienceContent from '@/sections/Experience/ExperienceContent'
 import * as Mock from './utils/mocks'
 
 describe('ExperienceContent', () => {

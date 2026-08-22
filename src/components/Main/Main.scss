@@ -6,7 +6,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
 
   @media (max-width: $breakpoint-mobile) and (orientation: portrait) {
     padding: 6rem 0.5rem 0 0.5rem;
