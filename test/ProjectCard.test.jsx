@@ -1,6 +1,6 @@
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import ProjectCard from '@/components/Projects/ProjectCard'
+import ProjectCard from '@/sections/Projects/ProjectCard'
 
 const projectCardProps = {
 	title: 'Proyecto 1',
@@ -9,7 +9,9 @@ const projectCardProps = {
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 		ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit`,
 	image: 'https://placehold.co/250',
-	languages: ['react', 'typescript', 'nodejs', 'express', 'postgresql']
+	languages: ['react', 'typescript', 'nodejs', 'express', 'postgresql'],
+	githubUrl: 'https://github.com/example/project-1',
+	demoUrl: 'https://project-1.example.com'
 }
 
 describe('ProjectCard', () => {
@@ -19,23 +21,25 @@ describe('ProjectCard', () => {
 		render(<ProjectCard {...projectCardProps} />)
 	})
 
-	it('should render a read more button', () => {
+	it('should render the full description', () => {
 		render(<ProjectCard {...projectCardProps} />)
 
-		screen.getByRole('button')
+		screen.getByText(/Lorem ipsum dolor sit amet/)
 	})
 
-	it('should show the rest of description when user click on read more', () => {
+	it('should render a link to the github repository', () => {
 		render(<ProjectCard {...projectCardProps} />)
-		const more = screen.getByLabelText('more')
-		const button = screen.getByRole('button')
 
-		expect(more.className).toBe('card__read-more')
-		expect(button.textContent).toBe('Leer mas...')
+		const link = screen.getByTitle('Ver código en GitHub')
+		expect(link.getAttribute('href')).toBe(projectCardProps.githubUrl)
+	})
 
-		fireEvent.click(button)
+	it('should render a link to the demo', () => {
+		render(<ProjectCard {...projectCardProps} />)
 
-		expect(more.className).toBe('card__read-more card__read-more--open')
-		expect(button.textContent).toBe('Leer menos...')
+		const links = screen.getAllByTitle('Ver proyecto desplegado')
+		expect(links.length).toBeGreaterThan(0)
+		links.forEach(link => expect(link.getAttribute('href')).toBe(projectCardProps.demoUrl))
 	})
 })
+

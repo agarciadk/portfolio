@@ -1,19 +1,25 @@
 import { JSX } from 'react/jsx-runtime'
-import Experience from './components/Experience/Experience'
+import DecorativeBackground from './components/DecorativeBackground/DecorativeBackground'
+import Experience from './sections/Experience/Experience'
+import Footer from './sections/Footer/Footer'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import Presentation from './components/Presentation/Presentation'
-import Skills from './components/Skills/Skills'
+import Presentation from './sections/Presentation/Presentation'
+import Projects from './sections/Projects/Projects'
+import Skills from './sections/Skills/Skills'
 
 function App (): JSX.Element {
 	return (
 		<>
+			<DecorativeBackground />
 			<Header />
 			<Main>
 				<Presentation />
-				<Experience />
+				<Projects />
 				<Skills />
+				<Experience />
 			</Main>
+			<Footer />
 		</>
 	)
 }

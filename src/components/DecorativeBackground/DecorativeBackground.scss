@@ -1,0 +1,76 @@
+.decorative-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decorative-background__rects,
+.decorative-background__dots {
+  position: absolute;
+  inset: 0;
+}
+
+.decorative-background__rect {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 2px;
+}
+
+.decorative-background__dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+
+  &--accent {
+    background-color: var(--primary-green);
+    box-shadow: 0 0 6px rgba(6, 146, 17, 0.55);
+  }
+
+  &--animated {
+    animation-name: decorative-background-pulse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes decorative-background-pulse {
+    0%, 100% {
+      opacity: var(--dot-min-opacity, 0.15);
+    }
+
+    50% {
+      opacity: var(--dot-max-opacity, 0.5);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decorative-background__dot--animated {
+    animation: none;
+    opacity: var(--dot-min-opacity, 0.3);
+  }
+}
+
+// menos elementos en tablet/móvil para no sobrecargar la pantalla
+@media (max-width: $breakpoint-tablet) {
+  .decorative-background__rect:nth-child(n+9) {
+    display: none;
+  }
+
+  .decorative-background__dot:nth-child(n+19) {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .decorative-background__rect:nth-child(n+6) {
+    display: none;
+  }
+
+  .decorative-background__dot:nth-child(n+13) {
+    display: none;
+  }
+}

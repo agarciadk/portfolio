@@ -1,0 +1,159 @@
+.skills-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  // background-color: #171921;
+
+  background-image:
+    linear-gradient(
+      rgba(6, 146, 17, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 146, 17, 0.035) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(6, 146, 17, 0.1),
+      transparent 65%
+    );
+
+  background-size:
+    48px 48px,
+    48px 48px,
+    100% 100%;
+
+  border-top: 1px solid rgba(6, 146, 17, 0.12);
+  border-bottom: 1px solid rgba(6, 146, 17, 0.12);
+
+  padding: 1rem 0;
+  color: var(--dark-font-color);
+  margin-top: 2rem;
+
+  @media (prefers-color-scheme: light) {
+    background: linear-gradient(
+      180deg,
+      rgba(var(--gray-light), 0) 0%,
+      rgba(var(--gray-light), 0.7) 50%,
+      rgba(var(--gray-light), 0) 100%
+    );
+    color: var(--light-font-color);
+  }
+}
+
+.skills-marquee {
+  width: 100%;
+  // el mask-image recorta cualquier contenido que se pinte fuera de esta caja,
+  // así que reservamos hueco arriba/abajo para que el tooltip y el hover-scale quepan dentro
+  padding: 3.5rem 0 3.5rem;
+
+  // el recorte horizontal ya lo aporta overflow-x: hidden global de body,
+  // así el tooltip y el hover de los iconos no se cortan verticalmente
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  justify-content: space-evenly;
+  animation: scroll 100s linear infinite;
+  will-change: transform;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.skills-section:hover .skills-track {
+  animation-play-state: paused;
+}
+
+.skills-icon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+
+  &:hover img {
+    transform: translateY(-4px) scale(1.15);
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 0.6rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: rgba(var(--black), 0.9);
+    color: var(--dark-card-font-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .skills-marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    )
+  }
+}

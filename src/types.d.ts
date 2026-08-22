@@ -7,6 +7,8 @@ export interface Project {
 	description: string
 	image: string
 	languages: Language[]
+	githubUrl: string
+	demoUrl?: string
 }
 
 export interface Experience {

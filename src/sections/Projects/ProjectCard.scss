@@ -1,0 +1,142 @@
+.card {
+  width: 100%;
+  height: fit-content;
+  background-color: rgba(var(--black), 0.7);
+  color: var(--dark-card-font-color);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  font-family: $font-family-tertiary;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: rgba(var(--black), 0.4);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+
+  .card-image-wrapper:hover & {
+    transform: scale(1.08);
+  }
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+
+  background: linear-gradient(
+    180deg,
+    #9cffb1 0%,
+    #3bcf6a 25%,
+    #079211 50%,
+    #2e7d32 70%,
+    #0b3d1a 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-description {
+  opacity: 0.8;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card-languages {
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #222;
+}
+
+.card-languages-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.6rem;
+}
+
+.card-languages-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.card-links {
+  display: flex;
+  gap: $spacing-sm;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 2px solid #222;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-color: rgba(var(--black), 0.4);
+  color: var(--dark-card-font-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: transform 0.2s;
+
+  &.border-green {
+    border-color: var(--primary-green);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    color: var(--dark-card-font-color);
+  }
+
+  img {
+    width: 1.1rem;
+    height: 1.1rem;
+    // los svg son monocromos oscuros por defecto; se invierten a blanco para el fondo oscuro de la card
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .card-links {
+    flex-direction: column;
+  }
+
+  .card-link {
+    justify-content: center;
+  }
+}

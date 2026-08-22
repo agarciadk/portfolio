@@ -7,16 +7,10 @@ const navItems = [
 	},
 	{
 		id: 1,
-		label: 'Experience',
-		section: 'experience',
+		label: 'Projects',
+		section: 'projects',
 		offset: -30
 	},
-	// {
-		// id: 2,
-		// label: 'Projects',
-		// section: 'projects',
-		// offset: -30
-	// },
 	// {
 		// id: 3,
 		// label: 'Education',
@@ -24,13 +18,19 @@ const navItems = [
 		// offset: -30
 	// },
 	{
-		id: 4,
+		id: 2,
 		label: 'Skills',
 		section: 'skills',
 		offset: -30
 	},
 	{
-		id: 5,
+		id: 3,
+		label: 'Experience',
+		section: 'experience',
+		offset: -30
+	},
+	{
+		id: 4,
 		label: 'Contact',
 		section: 'contact',
 		offset: -30,
