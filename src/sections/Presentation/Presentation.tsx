@@ -23,7 +23,6 @@ const Presentation: FC = (): JSX.Element => {
 				<a
 					role='button'
 					className='email-me-btn border-green'
-					target='_blank'
 					title='Email me'
 					href='mailto:agarciadk@gmail.com'
 				>

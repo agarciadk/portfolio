@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, it } from 'vitest'
-import Education from '@/components/Education/Education'
+import Education from '@/sections/Education/Education'
 
 describe('Education', () => {
 	afterEach(cleanup)
