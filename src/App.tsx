@@ -8,7 +8,7 @@ import Presentation from './sections/Presentation/Presentation'
 import Projects from './sections/Projects/Projects'
 import Skills from './sections/Skills/Skills'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App (): JSX.Element {
 	return (
