@@ -6,7 +6,7 @@ const mockProject: Project[] = [
 		description: `Finora is a full-stack personal finance application
     designed to help users manage their finances, track transactions,
     set budgets, and visualize their spending through analytics.`,
-		image: 'finora.png',
+		image: '/finora.jpg',
 		languages: [
       'react',
       'typescript',
