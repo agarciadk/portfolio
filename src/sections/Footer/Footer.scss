@@ -17,19 +17,32 @@
 
 .footer__brand {
   .logo {
+    display: flex;
+    align-items: center;
     font-size: 1.25rem;
     font-weight: 700;
 
+    .logo-icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: .7rem;
+    }
+
     .green {
       color: var(--primary-green);
+    }
+
+    .footer__email {
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      display: block;
+      font-weight: 400;
+      opacity: 0.6;
     }
   }
 
   .footer__tagline {
     margin-top: 0.5rem;
-    opacity: 0.6;
-    font-size: 0.85rem;
-    max-width: 30ch;
   }
 }
 

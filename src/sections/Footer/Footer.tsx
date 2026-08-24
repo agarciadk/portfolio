@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { JSX } from 'react/jsx-runtime'
 import hashLanguages from '@/utils/hashLanguages'
+import logo from '@/assets/icons/logo.svg'
 import mail from '@/assets/icons/mail.svg'
 import './Footer.scss'
 
@@ -11,7 +12,11 @@ const Footer: FC = (): JSX.Element => {
 		<footer className='footer'>
 			<div className='container footer__container'>
 				<div className='footer__brand'>
-					<span className='logo'>Alberto<span className='green'>.</span></span>
+					<span className='logo'>
+						<img src={logo} className='logo-icon' alt='' aria-hidden='true' />
+						Alberto<span className='green'>.</span>
+						<span className='footer__email'>agarciadk@gmail.com</span>
+					</span>
 					<p className='footer__tagline'>Software Engineer crafting web experiences.</p>
 				</div>
 

@@ -5,6 +5,7 @@ import NavItem from './NavItem'
 import Close from '@/components/Icons/Close'
 import HamburgerMenu from '@/components/Icons/HamburgerMenu'
 import hashLanguages from '@/utils/hashLanguages'
+import logo from '@/assets/icons/logo.svg'
 import mail from '@/assets/icons/mail.svg'
 import './Header.scss'
 
@@ -98,7 +99,10 @@ const Header: FC = (): JSX.Element => {
 					>
 						{isOpen ? <Close /> : <HamburgerMenu />}
 					</button>
-					<span className='logo'>Alberto<span className='green'>.</span></span>
+					<span className='logo'>
+						<img src={logo} className='logo-icon' alt='' aria-hidden='true' />
+						Alberto<span className='green'>.</span>
+					</span>
 					<a className='contact-button-mobile border-green' href='mailto:agarciadk@gmail.com'>
 						{lastItem.label}
 					</a>
