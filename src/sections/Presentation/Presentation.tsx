@@ -24,7 +24,7 @@ const Presentation: FC = (): JSX.Element => {
 					role='button'
 					className='email-me-btn border-green'
 					title='Email me'
-					href='mailto:agarciadk@gmail.com'
+					href='mailto:alberto@gapaci.dev'
 				>
 					Email me
 				</a>

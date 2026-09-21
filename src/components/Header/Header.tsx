@@ -103,7 +103,7 @@ const Header: FC = (): JSX.Element => {
 						<img src={logo} className='logo-icon' alt='' aria-hidden='true' />
 						Alberto<span className='green'>.</span>
 					</span>
-					<a className='contact-button-mobile border-green' href='mailto:agarciadk@gmail.com'>
+					<a className='contact-button-mobile border-green' href='mailto:alberto@gapaci.dev'>
 						{lastItem.label}
 					</a>
 				</div>
@@ -131,7 +131,7 @@ const Header: FC = (): JSX.Element => {
 							</li>
 						)}
 						<li style={{ transitionDelay: isOpen ? `${STAGGER_BASE_DELAY_MS + restItems.length * STAGGER_STEP_MS}ms` : '0ms' }}>
-							<a className='contact-button-desktop border-green' href='mailto:agarciadk@gmail.com' onClick={() => closeMenu()}>
+							<a className='contact-button-desktop border-green' href='mailto:alberto@gapaci.dev' onClick={() => closeMenu()}>
 								{lastItem.label}
 							</a>
 						</li>
@@ -143,7 +143,7 @@ const Header: FC = (): JSX.Element => {
 						<a href='https://github.com/agarciadk' target='_blank' rel='noopener noreferrer' title='GitHub'>
 							<img src={hashLanguages.github} alt='' aria-hidden='true' />
 						</a>
-						<a href='mailto:agarciadk@gmail.com' title='Email'>
+						<a href='mailto:alberto@gapaci.dev' title='Email'>
 							<img src={mail} alt='' aria-hidden='true' />
 						</a>
 					</div>

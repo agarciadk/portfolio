@@ -15,7 +15,7 @@ const Footer: FC = (): JSX.Element => {
 					<span className='logo'>
 						<img src={logo} className='logo-icon' alt='' aria-hidden='true' />
 						Alberto<span className='green'>.</span>
-						<span className='footer__email'>agarciadk@gmail.com</span>
+						<span className='footer__email'>alberto@gapaci.dev</span>
 					</span>
 					<p className='footer__tagline'>Software Engineer crafting web experiences.</p>
 				</div>
@@ -26,7 +26,7 @@ const Footer: FC = (): JSX.Element => {
 					  <a href='https://github.com/agarciadk' target='_blank' rel='noopener noreferrer' title='GitHub'>
 						  <img src={hashLanguages.github} alt='' aria-hidden='true' />
 					  </a>
-					  <a href='mailto:agarciadk@gmail.com' title='Email'>
+					  <a href='mailto:alberto@gapaci.dev' title='Email'>
 						  <img src={mail} alt='' aria-hidden='true' />
 					  </a>
           </div>
