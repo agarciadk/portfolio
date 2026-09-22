@@ -20,7 +20,7 @@ const mockProject: Project[] = [
       'sass'
     ],
 		githubUrl: 'https://github.com/agarciadk/finora',
-		demoUrl: 'https://finora-agarciadk.vercel.app'
+		demoUrl: 'https://finora.gapaci.dev'
 	}
 ]
 
