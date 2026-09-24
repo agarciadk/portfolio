@@ -6,19 +6,29 @@ import './Presentation.scss'
 import './Typewriter.scss'
 
 const Presentation: FC = (): JSX.Element => {
+	const startDate = new Date('2022-10-01');
+	const now = new Date();
+
+	const months =
+  	(now.getFullYear() - startDate.getFullYear()) * 12 +
+  	now.getMonth() -
+  	startDate.getMonth();
+
+	const years = Math.floor(months / 12);
+
 	return (
 		<Section className='presentation-wrapper' id='presentation'>
 			<div className='input-wrapper green'>
 				<span className='placeholder'></span>
 			</div>
-			<p className='position'>Software Engineer at <mark className='metal-green'>Minsait</mark></p>
+			<p className='position'>Software Engineer at <mark className='metal-green'>BBVA Technology</mark></p>
 			<p className='description'>Dedicated and dilient software engineer with a passion
 				for embracing new challenges. Committed to professional growth, I am eager to expand
 				my skill set. I excell as a collaborative team player, actively sharing my knowledge
 				and assisting others. I possess a keen eye for detail, ensuring meticulous attention
 				to even the smallest aspect.
 			</p>
-			<span className='years'>3+ years experience working</span>
+			<span className='years'>{years}+ years experience working</span>
 			<div className="actions">
 				<a
 					role='button'
