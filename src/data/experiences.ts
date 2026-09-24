@@ -1,14 +1,14 @@
 import { Experience } from '@/types'
 
 const experiences: Experience[] = [
-	{
-		company: 'Minsait',
-		position: 'Software Engineer II',
+  	{
+		company: 'BBVA Technology',
+		position: 'Developer Level 3',
 		sector: 'Finances',
 		business: 'B2B',
-		beginning: '2024/06',
+		beginning: '2026/09',
 		ending: 'Present',
-		location: 'Badajoz (Spain)',
+		location: 'Madrid (Spain)',
 		responsibilities: [
       {
         title: `Participated in three distinct projects for BBVA, collaborating in international
@@ -21,6 +21,31 @@ const experiences: Experience[] = [
           `GloMo (Global Mobile) Venezuela: Currently contributing to the early stages of BBVA's 
           Global Mobile Banking Platform, a groundbreaking initiative to create a unified a scalable 
           mobile banking solution from scratch.`
+        ]
+      }
+    ],
+		keys: [],
+	},
+	{
+		company: 'Minsait',
+		position: 'Software Engineer II',
+		sector: 'Finances',
+		business: 'B2B',
+		beginning: '2024/06',
+		ending: '2026/09',
+		location: 'Badajoz (Spain)',
+		responsibilities: [
+      {
+        title: `Participated in three distinct projects for BBVA, collaborating in international
+        and multidisciplinary teams to deliver innovative solutions:`,
+        description: [
+          `CRR - Customer Risk Rating: Collaborated with an internation team (half Spanish, half Mexican) 
+          to develop a global application aimed at improving customer risk assesment processes.`,
+          `RBA Legacy Migration: Transitioned web components from Cells to Vanilla JavaScript, HTML 
+          and CSS, ensuring clean, maintainable, and efficient code.`,
+          `GloMo (Global Mobile) Venezuela: Currently contributing to the early stages of BBVA's 
+          Global Mobile Banking Platform, a groundbreaking initiative to create a unified a scalable 
+          mobile banking solution from scratch.`,
         ]
       }
     ],
