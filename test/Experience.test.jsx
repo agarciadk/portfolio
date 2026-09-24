@@ -15,10 +15,10 @@ describe('Experience', () => {
 		screen.getByRole('heading', { name: 'Experience' })
 	})
 
-	it('should render 3 rows', () => {
+	it('should render 4 rows', () => {
 		render(<Experience />)
 
 		const rows = screen.getAllByRole('row')
-		expect(rows).toHaveLength(3)
+		expect(rows).toHaveLength(4)
 	})
 })
